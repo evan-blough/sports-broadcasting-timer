@@ -207,16 +207,26 @@ namespace basketball_app
             }
         }
 
+        public string NewQuarter()
+        {
+            time = quarterTime;
+            quarter += 1;
+            WriteQuarter();
+            return quarter.ToString();
+        }
+
         public string SetHalftime()
         {
             time = halfTime;
             quarter += 1;
+            WriteQuarter();
             return FindTime();
         }
         public string ResetClock()
         {
             quarter = 1;
             time = quarterTime;
+            WriteQuarter();
             return FindTime();
         }
 
@@ -271,6 +281,30 @@ namespace basketball_app
             sw = new StreamWriter("timer.txt");
             sw.Write(newTime);
             sw.Close();
+        }
+
+        public void WriteQuarter()
+        {
+            sw = new StreamWriter("quarter.txt");
+            sw.Write(GetQuarter());
+            sw.Close();
+        }
+
+        public string GetQuarter()
+        {
+            int number = quarter % 100;
+            if (number == 1) return "1st";
+            else if (number == 2) return "2nd";
+            else if (number == 3) return "3rd";
+
+            if (number >= 4 && number <= 20) return $"{number}th";
+
+            number = number % 10;
+            if (number == 1) return $"{number}st";
+            else if (number == 2) return $"{number}nd";
+            else if (number == 3) return $"{number}rd";
+
+            return $"{number}th";
         }
     }
 }

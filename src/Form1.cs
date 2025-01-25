@@ -149,9 +149,8 @@ namespace basketball_app
         {
             time.timer.Stop();
             time.time = time.quarterTime;
-            time.quarter = time.quarter >= 4 ? 1 : time.quarter += 1;
             label18.Text = time.FindTime();
-            label15.Text = time.quarter.ToString();
+            label15.Text = time.NewQuarter();
         }
 
         private void button13_Click(object sender, EventArgs e)

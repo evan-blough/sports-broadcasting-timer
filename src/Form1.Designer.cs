@@ -403,7 +403,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(1073, 289);
+            this.button12.Location = new System.Drawing.Point(1064, 289);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(106, 23);
             this.button12.TabIndex = 33;
@@ -413,11 +413,11 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(913, 289);
+            this.button13.Location = new System.Drawing.Point(904, 289);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(154, 23);
+            this.button13.Size = new System.Drawing.Size(163, 23);
             this.button13.TabIndex = 34;
-            this.button13.Text = "Halftime/GameOver";
+            this.button13.Text = "HalfTime/GameOver";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -443,7 +443,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(799, 289);
+            this.button14.Location = new System.Drawing.Point(790, 289);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(108, 23);
             this.button14.TabIndex = 37;
