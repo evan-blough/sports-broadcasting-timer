@@ -156,7 +156,7 @@ namespace basketball_app
         private void button13_Click(object sender, EventArgs e)
         {
             time.timer.Stop();
-            label18.Text = time.quarter == 2 ? time.SetHalftime() : (time.quarter == 4 ? time.ResetClock() : time.FindTime());
+            label18.Text = time.quarter == 2 ? time.SetHalftime() : (time.quarter >= 4 ? time.ResetClock() : time.FindTime());
 
             label15.Text = time.quarter.ToString();
         }
